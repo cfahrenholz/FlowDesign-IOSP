@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MedicalTestsCredibility.ConsoleApp": {
+      "commandName": "Project",
+      "commandLineArgs": "03-MedicalTestsDB.json"
+    }
+  }
+}

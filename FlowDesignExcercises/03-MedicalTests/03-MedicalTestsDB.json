@@ -1,0 +1,23 @@
+[
+    {
+        "Test": "Mammography",
+        "Diagnosis": "Breast Cancer",
+        "Prevalence": 0.01,
+        "Sensitivity": 0.8,
+        "Specificity": 0.904
+    },
+    {
+        "Test": "Blood Test",
+        "Diagnosis": "Leukemia",
+        "Prevalence": 0.2,
+        "Sensitivity": 0.85,
+        "Specificity": 0.75
+    },
+    {
+        "Test": "X-Ray",
+        "Diagnosis": "Lung Cancer",
+        "Prevalence": 0.15,
+        "Sensitivity": 0.95,
+        "Specificity": 0.9
+    }
+]
