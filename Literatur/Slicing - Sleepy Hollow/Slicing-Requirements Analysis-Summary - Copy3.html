@@ -1,0 +1,470 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=Slicing-RequirementsAnalysis-Summary.htm>
+<link rel=File-List href="Slicing-RequirementsAnalysis-Summary_files/filelist.xml">
+</head>
+
+<body lang=de style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+    <!-- Goals of Requirements Analysis -->
+    <div style='margin-top:0in;margin-left:0in;width:7.2326in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'>Goals of Requirements Analysis</h1>
+        <div style='margin-top:.0388in;margin-left:0in;width:2.0534in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Dienstag, 16. Juli 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>15:56</p>
+        </div>
+        <div style='margin-top:.4305in;margin-left:0in;width:7.2326in'>
+            <ul style='margin-top:0in; margin-bottom:0in'>
+                <li><strong>Understanding</strong></li>
+                <li>Tuple (function signature, test cases)</li>
+                <li>Nice to have: causal chain
+                    <ul>
+                        <li>Steps necessary to transform input to desired output</li>
+                    </ul>
+                </li>
+                <li>Function with signature &lt;signature&gt; to satisfy test &lt;test case&gt; by implementing &lt;causal chain&gt;.</li>
+                <li>Do not leave PO before you know the tuple
+                    <ul>
+                        <li>Avoids response waiting times and unnecessary local pre-optimizations</li>
+                    </ul>
+                </li>
+                <li>If not clear even for PO -> reduce scope or implement prototype
+                    <ul>
+                        <li>Prototype: can be code or other type of analysis</li>
+                    </ul>
+                </li>
+                <li>At end of discussion, it should be clear: Which function should I implement?
+                    <ul>
+                        <li><strong>Trigger function with Input and Output data: triggered by user</strong></li>
+                    </ul>
+                </li>
+            </ul>
+            <p><cite style='font-family:Calibri;font-size:9.0pt;color:#595959'>From &lt;<a href="https://www.dotnetpro.de/planung/architektur/strukturiert-zerlegen-2911848.html">https://www.dotnetpro.de/planung/architektur/strukturiert-zerlegen-2911848.html</a>&gt;</cite></p>
+        </div>
+    </div>
+
+    <!-- Hierarchy Levels -->
+    <div style='margin-top:0in;margin-left:0in;width:7.8909in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'>Hierarchy Levels</h1>
+        <div style='margin-top:.0388in;margin-left:.2909in;width:2.0534in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Dienstag, 16. Juli 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>16:28</p>
+        </div>
+        <div style='margin-top:.4305in;margin-left:0in;width:7.8909in'>
+            <p><cite style='font-family:Calibri;font-size:9.0pt;color:#595959'>From &lt;<a href="https://www.dotnetpro.de/planung/clean-code/stier-hoernern-packen-2915202.html">https://www.dotnetpro.de/planung/clean-code/stier-hoernern-packen-2915202.html</a>&gt;</cite></p>
+            <img src="Slicing-RequirementsAnalysis-Summary_files/image001.jpg" width=480 height=360>
+            <ul>
+                <li>Top down analysis, top down slices (implementations), from outside to inside</li>
+                <li>Some levels (e.g., system) are rarely in focus, some are often (e.g., Interactions)</li>
+            </ul>
+            <ul>
+                <li><strong>L1 - System:</strong> Overview of the entire software system in its environment.</li>
+                <li><strong>L2 - Context:</strong> The software system, divided into large thematic areas.</li>
+                <li><strong>L3 - App:</strong> A context, divided into different, independent accesses for user roles.</li>
+                <li><strong>L4 - Worker:</strong> An app, divided into broad independent units with their interfaces for humans or software.</li>
+                <li><strong>L5 - Perspective:</strong> A worker, viewed through different user perspectives.</li>
+                <li><strong>L6 - Dialog:</strong> A perspective, divided into thematically focused, clearly distinguishable "windows" with their transitions or connections.</li>
+                <li><strong>L7 - Interaction:</strong> The functions of the software that can be triggered in a dialog with their starting points and possibly different endpoints.</li>
+                <li><strong>L8 - Entry Point:</strong> The "trigger function" behind an interaction with a concrete description of the messages to/from a "trigger function" (Request, Response) and the relevant state or side effects.</li>
+                <li><strong>L9 - CQS:</strong> Classification of an entry point according to the Command-Query-Separation principle or splitting the "trigger function" into several functions that are CQS-compliant.</li>
+                <li><strong>L10 - Feature:</strong> Breaking down the requirements for a "trigger function" into finer increments, starting from its messages and its state.</li>
+                <li>You may have a different structure, but there are <strong>two fixed points</strong>
+                    <ul>
+                        <li><strong>System</strong></li>
+                        <li><strong>Entry Point</strong></li>
+                    </ul>
+                </li>
+            </ul>
+            <img src="Slicing-RequirementsAnalysis-Summary_files/image002.png" width=570 height=188>
+            <p style='font-family:Calibri;font-size:11.0pt'>Suggestion for developer relevant structures</p>
+            <img src="Slicing-RequirementsAnalysis-Summary_files/image003.jpg" width=671 height=294>
+        </div>
+    </div>
+
+    <!-- System -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>System</h1>
+        <ul>
+            <li>Environment &lt;-&gt; Software communication</li>
+            <li>User Roles (types of users, can also be other systems)
+                <ul>
+                    <li>Portals</li>
+                </ul>
+            </li>
+            <li>Resources (file system, database, other systems,…)
+                <ul>
+                    <li>Providers</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image004.jpg" width=325 height=320>
+        <ul>
+            <li>Request and Response</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image005.jpg" width=341 height=280>
+    </div>
+
+    <!-- Checklist -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Checklist</h1>
+        <ul>
+            <li>All user roles known?</li>
+            <li>All <strong>states</strong> (internal/external) / <strong>resources</strong> known? Easily overseen e.g., time, random numbers generator</li>
+            <li>Do we know the domain now?</li>
+        </ul>
+        <ul>
+            <li>Which technologies (frontend, …)?</li>
+            <li>Team know-how about the technology?</li>
+            <li>Interactions between system and users/environment?
+                <ul>
+                    <li>Function signature, which state is required and how to be used by function</li>
+                    <li>Test cases</li>
+                    <li>Which trigger function should I implement?</li>
+                </ul>
+            </li>
+            <li>Non-functional requirements (performance, security…)?</li>
+            <li>Data structures?</li>
+        </ul>
+    </div>
+
+    <!-- Still Unclear how to get to Entry Point? -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Still Unclear how to get to Entry Point?</h1>
+        <ul>
+            <li>Think from bottom to top</li>
+            <li>Entry point unclear? What about next level interactions?</li>
+            <li>Interactions unclear? What about next level dialogs and their connections?</li>
+            <li>Dialogs unclear? What about perspectives of users and how they see the system and their interaction?</li>
+            <li>If clear -> go down, if not -> go up</li>
+        </ul>
+    </div>
+
+    <!-- Interactions (Level 7) -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5215in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'>Interactions (Level 7)</h1>
+        <div style='margin-top:.0388in;margin-left:.0215in;width:2.0534in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Dienstag, 23. Juli 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>16:36</p>
+        </div>
+        <h2 style='font-family:Calibri;font-size:20.0pt;color:#1E4E79'>Basic Code Structure of Processing Interactions</h2>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image006.jpg" width=480 height=542>
+        <ul>
+            <li>Collect request input data via UI technology in Portal (Adapter)</li>
+            <li>Process = trigger function = entry point</li>
+            <li>Project response output data via UI technology in Portal (Adapter)</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image007.jpg" width=480 height=110>
+        <p>Event handler calls Trigger function</p>
+        <ul>
+            <li>Event handler / Command (WPF) are part of UI technology (within Portal as Adapter)</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image008.jpg" width=480 height=302>
+        <ul>
+            <li>Interactions can be hard to identify. Dozens/Hundreds of interactions possible in complex systems. Customer cannot answer it in the first place.</li>
+            <li><strong>Interaction is the answer to: What should happen when?</strong></li>
+        </ul>
+        <p>Here are typical questions to guide the conversation:</p>
+        <ul>
+            <li>“What buttons do you want to be able to click?”</li>
+            <li>“What menu items do you need?”</li>
+            <li>“Should key presses trigger behavior when entering data?”</li>
+            <li>“When and how should behavior X actually be triggered?”</li>
+            <li>“Does behavior Y occur due to a 'stimulus' from the user or automatically?”</li>
+        </ul>
+        <ul>
+            <li>The more requirements, the less a PO can say in the early analysis phase. Thus, we have hierarchy levels above interactions.</li>
+            <li>Sometimes not so important if interaction is triggered by button or menu.</li>
+            <li>More important to distinguish behavior X from Y</li>
+            <li>State in frontend? Trigger function returns all data or only new data? Another trigger function could do it differently
+                <ul>
+                    <li>-> UI Technology must be clear</li>
+                </ul>
+            </li>
+        </ul>
+        <p><cite style='font-family:Calibri;font-size:9.0pt;color:#595959'>From &lt;<a href="https://www.dotnetpro.de/planung/clean-code/messer-richtig-ansetzen-2918866.html">https://www.dotnetpro.de/planung/clean-code/messer-richtig-ansetzen-2918866.html</a>&gt;</cite></p>
+    </div>
+
+    <!-- Entry Points (Level 8) -->
+    <div style='margin-top:0in;margin-left:0in;width:7.6041in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'>Entry Points (Level 8)</h1>
+        <div style='margin-top:.0388in;margin-left:0in;width:2.3944in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Freitag, 13. September 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>17:11</p>
+        </div>
+        <ul>
+            <li>What is the difference between Trigger function and Entry Point
+                <ul>
+                    <li>Same function on different levels of hierarchy</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image009.jpg" width=480 height=176>
+        <ul>
+            <li>Left Interaction Level, right Entry Point Level</li>
+            <li>Trigger function during PO discussion on Interaction Level. For understanding that there is such a function with its request/response data in general (e.g., HTTP Endpoint / Api Controller)</li>
+            <li>Entry Point more concrete, where the real behavior is implemented in the backend (Processor)
+                <ul>
+                    <li>Requires Request/Input data</li>
+                    <li>Response data</li>
+                    <li>May produce state/side effect</li>
+                </ul>
+            </li>
+            <li>State within frontend or black box? Signature depends on it
+                <ul>
+                    <li>Depends on where and how you can test more code more easily?</li>
+                    <li>If state handling in frontend requires more effort than do it in black box (backend). If trivial in frontend where code does not requiring to be tested then do it in frontend</li>
+                </ul>
+            </li>
+            <li>To not consider the environment and its interactions with the core (black box) of the software system, that could be a problematic pre-optimization.
+                <ul>
+                    <li>It is ok that the UI/UX paradigm is considered in the black box but of course the functionality must be encapsulated within Portal</li>
+                    <li>Must be a conscious decision between efficiency and flexibility (to be able to change UI technology)</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>Example
+                <ul>
+                    <li>Trigger functions:</li>
+                    <img src="Slicing-RequirementsAnalysis-Summary_files/image010.png" width=420 height=185>
+                    <li>Entry points:</li>
+                    <img src="Slicing-RequirementsAnalysis-Summary_files/image011.jpg" width=480 height=335>
+                    <li>Either test each entry point separately or test with scenario test, e.g.:</li>
+                    <img src="Slicing-RequirementsAnalysis-Summary_files/image012.png" width=549 height=265>
+                </ul>
+            </li>
+        </ul>
+        <p>Scenario tests just cover basic workflow (end to end) but not all conditions and logic of the code</p>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image013.jpg" width=314 height=624>
+        <ul>
+            <li>In simple cases you have a few simple interactions and you can go breadth-first or concentrate on single interaction (depth-first), it depends how breadth you can work. Important to have at least one entry point to complete and then proceed with next</li>
+        </ul>
+    </div>
+
+    <!-- Command Query Separation - CQS (Level 9) -->
+    <div style='margin-top:0in;margin-left:0in;width:7.6041in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'><strong>Command Query Separation - CQS (Level 9)</strong></h1>
+        <div style='margin-top:.0388in;margin-left:0in;width:2.2888in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Montag, 21. Oktober 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>17:21</p>
+        </div>
+        <ul>
+            <li>Separation of Command and Query</li>
+            <li>Command:
+                <ul>
+                    <li>Change state</li>
+                    <li>No return value except metadata like ID of new dataset or count of changed/deleted datasets</li>
+                    <li>Can be seen like a POST in web</li>
+                </ul>
+            </li>
+            <li>Query
+                <ul>
+                    <li>Just read / return values</li>
+                    <li>No state change</li>
+                    <li>GET in web</li>
+                </ul>
+            </li>
+            <li>Advantages
+                <ul>
+                    <li>Separate testability of these different approaches and the separate handling of data</li>
+                    <li>Technological separation of these modes; for example, <strong>Commands</strong> may require locks, but <strong>Queries</strong> do not.</li>
+                    <li>Reusability in different contexts due to more fine-grained functions.</li>
+                </ul>
+            </li>
+            <li>From this perspective, entry points are often unclear. They offer potential for refinement by narrowing the scope to focus on command versus query.</li>
+        </ul>
+    </div>
+
+    <!-- UI drives Slicing -->
+    <div style='margin-top:0in;margin-left:0in;width:7.6041in'>
+        <h1 style='font-family:"Calibri Light";font-size:24.0pt;color:#1E4E79'>UI Drives Slicing</h1>
+        <div style='margin-top:.0388in;margin-left:0in;width:2.393in'>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>Mittwoch, 23. Oktober 2024</p>
+            <p style='font-family:Calibri;font-size:10.0pt;color:#767676'>23:31</p>
+        </div>
+        <ul>
+            <li>Problem in requirements analysis: Hundreds of Entry points possible
+                <ul>
+                    <li>PO cannot give the Entry points, even Interactions are not all known</li>
+                </ul>
+            </li>
+            <li>Hierarchy of Scopes</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image014.jpg" width=630 height=467>
+        <ul>
+            <li>Slicing hierarchy orthogonal to User Stories / Use Cases.</li>
+            <li>User Stories / Use Cases define scopes that have many slices in slicing hierarchy
+                <ul>
+                    <li>Developer has no starting point for design and coding</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image015.jpg" width=628 height=332>
+        <ul>
+            <li>Developer needs to slice to find Entry points to have a starting point for design and coding</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image016.jpg" width=480 height=417>
+    </div>
+
+    <!-- Applications -->
+    <div style='margin-top:0in;margin-left:0in;width:7.6041in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Applications</h1>
+        <ul>
+            <li>First look at roles that user of system has</li>
+            <li>For each role separate app or all in one app?</li>
+        </ul>
+        <ul>
+            <li>One size fits all
+                <ul>
+                    <li>Outlook: Mail, Calendar, Contacts, Tasks</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image017.jpg" width=480 height=193>
+        <ul>
+            <li>Best of breed
+                <ul>
+                    <li>E.g. Smartphone apps</li>
+                </ul>
+            </li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image018.jpg" width=480 height=494>
+        <ul>
+            <li>Separate Desktop Apps / Icon</li>
+            <li>Mix of UI technologies (web, desktop) or platforms possible</li>
+            <li>Best possible user experience</li>
+            <li>Loosely coupled requirements / implementation</li>
+            <li>Parallel work can be easier</li>
+            <li>Different Release Cycles</li>
+            <li>Disadvantage of effort for connecting apps but can be seen as advantage for loose coupling</li>
+            <li>Resources connect apps. Either resource required anyway or extra because of the need to connect apps</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image019.jpg" width=480 height=217>
+        <ul>
+            <li>Less interactions than in one size fits all software</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image020.jpg" width=480 height=325>
+    </div>
+
+    <!-- Perspectives -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Perspectives</h1>
+        <ul>
+            <li>What if even Applications do not show interactions?</li>
+            <li>A user role can have different perspectives within an application</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image021.jpg" width=480 height=306>
+        <ul>
+            <li>Do not look to frontend as a monolith</li>
+            <li>Divide frontend into more smaller pieces by perspective
+                <ul>
+                    <li>E.g. Menu with different parts</li>
+                    <li>Microsoft Word
+                        <ul>
+                            <li>Write Text</li>
+                            <li>Create Smart Art / Diagrams</li>
+                            <li>Etc.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Slicing is not about the HOW (UX / Visualization), it’s about the WHAT - finding interactions / trigger functions that the user wants to do</li>
+        </ul>
+    </div>
+
+    <!-- Dialogs -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Dialogs</h1>
+        <ul>
+            <li>Below Perspectives</li>
+            <li>One Perspective contains 1 or N dialogs</li>
+            <li>Example: Billing system with the following Perspectives and Dialogs</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image022.png" width=232 height=507>
+        <ul>
+            <li>Each Perspective helps to identify the Dialogs</li>
+            <li>UI/UX Expert helps for defining Dialogs/UI</li>
+            <li><strong>Which</strong> Dialogs exist</li>
+            <li>How do they <strong>depend on</strong> each <strong>other</strong></li>
+            <li>How can user <strong>navigate</strong> from one to another one</li>
+            <ul>
+                <li>Each transition is <strong>Interaction</strong></li>
+            </ul>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image023.jpg" width=671 height=313>
+        <ul>
+            <li>Unidirectional
+                <ul>
+                    <li>Rechungsübersicht -> Überfällige Zahlungen</li>
+                    <li>User can go back but without triggering new behavior, just close dialog</li>
+                </ul>
+            </li>
+            <li>Forward and Backward
+                <ul>
+                    <li>Login -> Rechnungsübersicht</li>
+                    <li>Maybe back to Login-Dialog for logout</li>
+                </ul>
+            </li>
+            <li>Sometimes Dialog just occurs
+                <ul>
+                    <li>Login Dialog during start</li>
+                </ul>
+            </li>
+            <li>Sometimes no switch
+                <ul>
+                    <li>Login Dialog -> Reset Password</li>
+                </ul>
+            </li>
+            <li>Bidirectional
+                <ul>
+                    <li>Customer overview <-> Customer details</li>
+                    <li>Way back not optional</li>
+                    <li>Data may have changed and saved</li>
+                </ul>
+            </li>
+            <li>Post-It notes may help to move and get a feeling for the best navigation between Dialogs</li>
+            <li>Could also be a Shell UI (navigation bar e.g., like in smartphone apps)</li>
+        </ul>
+        <img src="Slicing-RequirementsAnalysis-Summary_files/image024.jpg" width=480 height=436>
+        <ul>
+            <li>When you work with <strong>User Stories</strong> and <strong>Use Cases</strong> you need to <strong>discuss Perspectives and Dialogs</strong> with PO</li>
+        </ul>
+    </div>
+
+    <!-- Interactions -->
+    <div style='margin-top:0in;margin-left:0in;width:7.5493in'>
+        <h1 style='font-family:Calibri;font-size:24.0pt;color:#1E4E79'>Interactions</h1>
+        <ul>
+            <li>When you have identified the software’s dialogs or a subset of them that are sufficient for one increment then you know the first potential interactions
+                <ul>
+                    <li>Those who have transitions between the dialogs</li>
+                    <li>How are interactions triggered?</li>
+                    <li>What are the entry points to be called from interactions?</li>
+                </ul>
+            </li>
+            <li>Next step zoom into dialogs
+                <ul>
+                    <li>How does the dialog look like?</li>
+                    <li>What should happen when within the dialog?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div>
+    <p style='text-align:left;font-family:Arial;font-size:9pt;color:#969696'>Created with OneNote.</p>
+</div>
+
+</body>
+
+</html>
