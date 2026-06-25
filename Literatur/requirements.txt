@@ -1,0 +1,12 @@
+# requirements.txt
+# pdf_to_markdown.py dependencies
+# Install with: python -m pip install -r requirements.txt
+
+# PDF text & table extraction (includes pdfminer.six and pypdfium2 as sub-dependencies)
+pdfplumber>=0.11.10
+
+# PDF structural operations & image extraction
+pypdf>=6.5.0
+
+# Image processing (saving extracted images as PNG)
+Pillow>=11.0.0
