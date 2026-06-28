@@ -2,6 +2,10 @@
 
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p1_001](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p1_001.png)
+
+
+
 ---
 
 
@@ -23,6 +27,10 @@ Finalisierung und der anschließenden Vermarktung des Buches. Lean
 Publishing unterstützt den Autor darin ein Buch zu schreiben, das auch
 gelesen wird.
 © 2018-2020 dotnetpro und Ralf Westphal
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p2_002](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p2_002.png)
+
 
 
 ---
@@ -117,6 +125,14 @@ EinefrüheFormderSoftwarezelleausdemApril2005
 SoftwarezellenimVerbundfüreineverteilteArchitektur
 Damals war mir sehr wichtig, die Geschäftslogik in den Mittelpunkt zu
 rücken. Sie schien mir in anderen Architekturmustern zu wenig betont
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p6_003](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p6_003.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p6_004](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p6_004.png)
+
 
 
 ---
@@ -348,6 +364,10 @@ rung angeht. Wir sollten uns nicht überschätzen in der Fähigkeit, Code zu
 verstehen. Die Zeit für einen Bugfix oder zum Einbau einer Erweiterung
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p13_005](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p13_005.png)
+
+
+
 ---
 
 
@@ -389,6 +409,10 @@ der Verantwortlichkeiten kann gezielt mit automatisierten Tests überprüft
 werden. So lässt sich nicht zügig feststellen, ob der Code schon reif zur
 Auslieferung ist oder nach einer Änderung immer noch korrekt, also
 regressionsfrei.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p15_006](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p15_006.png)
+
 
 
 ---
@@ -443,6 +467,14 @@ erfinden,sondernkönnensichdaraufverlassen,dassSienichtsgrobfalsch
 machen, wenn Sie nach dem Schema strukturieren. Mit einem Architek-
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p17_007](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p17_007.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p17_008](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p17_008.png)
+
+
+
 ---
 
 
@@ -463,6 +495,10 @@ Abbildung5:KonkreteSchichtungderAnwendungslogik
 Ja, damit ist etwas gewonnen. Es ist besser als vorher, aber noch nicht
 wirklich gut. Denn schauen Sie sich einmal den Code der Businesslogik
 an:
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p18_009](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p18_009.png)
+
 
 
 ---
@@ -490,6 +526,10 @@ fundamentaleProblemdesSchichtenmodellsgehtnichtweg,wennichdie
 Wortzählungslogik noch weiter refaktorisiere. Der Klumpen in Count_-
 words() dient also der Unterstreichung des grundsätzlich zu lösenden
 Problems der funktionalen Abhängigkeiten.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p19_010](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p19_010.png)
+
 
 
 ---
@@ -550,6 +590,14 @@ seinem geistigen Auge ein Beziehungsgeflecht wie entstehen und weiß:
 alles hübsch entkoppelt und testbar.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p21_011](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p21_011.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p21_012](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p21_012.png)
+
+
+
 ---
 
 
@@ -575,6 +623,14 @@ structor injection).
 ¹⁰https://de.wikipedia.org/wiki/Inversion_of_Control
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p22_013](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p22_013.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p22_014](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p22_014.png)
+
+
+
 ---
 
 
@@ -596,6 +652,14 @@ hängig. Um trotz dieser Abhängigkeiten Testbarkeit zu erlangen, müssen
 zusätzliche Elemente eingeführt werden: Abstraktionen (hier: Interfaces).
 Und aus einer Menge unidirektionaler Abhängigkeiten werden zwei Men-
 gen, von denen eine auch noch gegenläufige Abhängigkeiten enthält.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p23_015](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p23_015.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p23_016](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p23_016.png)
+
 
 
 ---
@@ -672,6 +736,10 @@ zumindest scheinbar gelöst. Denn in konzentrischen Architekturen wei-
 ¹⁸https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p25_017](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p25_017.png)
+
+
+
 ---
 
 
@@ -701,6 +769,10 @@ cies.”
 terworfen als „Policies“ (Regeln).
 ¹⁹http://www.amazon.de/Clean-Architecture-Craftsmans-Software-Structure/dp/
 0134494164
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p26_018](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p26_018.png)
+
 
 
 ---
@@ -759,6 +831,10 @@ hinzugekommen ist. Der ist ganz explizit in der Clean Architecture und
 hat laut Martin folgenden Auftrag:
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p28_019](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p28_019.png)
+
+
+
 ---
 
 
@@ -776,6 +852,10 @@ Außerdem: Der Use Case „schiebt“ das Ergebnis der Wortzählung nun
 an einen Presenter weiter, statt es seinem Aufrufer – dem Controller
 – zurückzugeben. Das ist in der Clean Architecture auch ganz explizit
 beschrieben:
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p29_020](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p29_020.png)
+
 
 
 ---
@@ -812,6 +892,10 @@ Laufzeit der Kontrollfluss. In der Clean Architecture ist das nicht mehr
 der Fall!
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p30_021](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p30_021.png)
+
+
+
 ---
 
 
@@ -835,6 +919,14 @@ nesslogic; sie nutzt aber nicht, sondern implementiert. Ebenso ist es mit
 den anderen Implementationen, die in Abbildung 19 alle in der oberen
 Zeile stehen. Keine Pfeile zwischen ihnen. Alle Pfeile weisen nach unten
 auf Abstraktionen.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p31_022](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p31_022.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p31_023](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p31_023.png)
+
 
 
 ---
@@ -869,6 +961,10 @@ damit Abhängigkeiten in eine gewisse Richtung weisen? Komplexität für
 Sauberkeit?
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p32_024](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p32_024.png)
+
+
+
 ---
 
 
@@ -892,6 +988,10 @@ Wofür also die Steigerung der Komplexität? Was ist wirklich gewonnen
 durch die konzentrischen Architekturmuster?
 Abbildung 21: Die Laufzeitabhängigkeiten zeigen von außen nach innen und wieder nach
 außeninderCleanArchitecture
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p33_025](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p33_025.png)
+
 
 
 ---
@@ -1011,6 +1111,10 @@ in mehrere Teile: Controller und Presenter sind getrennt und es gibt
 IPresenter; ebenfalls getrennt sind IText und IStopwords, wo vorher nur
 IDataAccessLayer war.
 ²⁰https://en.wikipedia.org/wiki/Interface_segregation_principle
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p36_026](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p36_026.png)
+
 
 
 ---
@@ -1179,6 +1283,10 @@ Sie ergeben sich allein aus der Struktur. Darüber hinaus kann es also
 innerhalb der Logik-Blöcke weitere Verantwortlichkeiten geben.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p41_027](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p41_027.png)
+
+
+
 ---
 
 
@@ -1252,6 +1360,10 @@ verzichten? Natürlich nicht!
 Funktionen sind wertvolle Strukturierungsmittel für Logik. Um funktio-
 nale Abhängigkeiten los zu werden, brauchen wir davon mehr, nicht
 weniger.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p43_028](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p43_028.png)
+
 
 
 ---
@@ -1346,6 +1458,14 @@ In ihr gibt es mehr Funktionen, die jedoch alle kleiner sind als die bisheri-
 gen Hybride. Logik befindet sich darin nur noch in den Blättern.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p46_029](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p46_029.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p46_030](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p46_030.png)
+
+
+
 ---
 
 
@@ -1420,6 +1540,10 @@ Zwar sind gewöhnlich fast alle Operationen über Daten verbunden, doch
 interessant sind vor allem Datenstrukturen, die Sie selbst definieren.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p48_031](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p48_031.png)
+
+
+
 ---
 
 
@@ -1488,6 +1612,10 @@ möglichst wenigen Modulen zu isolieren. Hier kommt das Prinzipienduo
 DIP/IoC dann tatsächlich zu gutem Einsatz.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p50_032](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p50_032.png)
+
+
+
 ---
 
 
@@ -1521,6 +1649,10 @@ Die Klasse Dataaccess in Abbildung 24 liefert zwei Beispiele für Operatio-
 nen mit I/O-Logik.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p51_033](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p51_033.png)
+
+
+
 ---
 
 
@@ -1551,6 +1683,10 @@ den Blick genommen ist, was Software ausmacht: Logik, deren Verhalten
 darin besteht, Daten zu transformieren.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p52_034](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p52_034.png)
+
+
+
 ---
 
 
@@ -1575,6 +1711,10 @@ Bestandteil der Umwelt. Angedeutet wird das durch die Kreislinie, die
 Innen von Außen trennt.
 Auf der Kreislinie angesiedelt sind Grundverantwortlichkeiten, die alle
 zur Kategorie Adapter gehören. Sie kapseln insbesondere I/O-Logik, aber
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p53_035](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p53_035.png)
+
 
 
 ---
@@ -1689,6 +1829,10 @@ nicht direkt von einer anderen abhängig sein, sondern von einer “Abstrak-
 tion” (Abbildung 9) –, doch diese Art der Abstraktion meine ich nicht.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p56_036](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p56_036.png)
+
+
+
 ---
 
 
@@ -1711,6 +1855,10 @@ eint, eben weil sie verschieden sind. Im Verein stellen Sie auf höhe-
 rerEbeneallerdingsetwasNeuesdar.AlsBeispieldafür:Zahnräder,
 Schrauben, Zeiger, Feder ergeben zusammen ein Uhrwerk. Integra-
 tion ist eine Form von Komposition.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p57_037](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p57_037.png)
+
 
 
 ---
@@ -1744,6 +1892,10 @@ Eine gewisse Abstraktion durch Kategorisierung enthalten die Architek-
 turmodellejedoch,weildieBlöckebzw.SchalenmitihrenVerantwortlich-
 keiten für eine größere Zahl von Modulen stehen, die demselben Zweck
 dienen.
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p58_038](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p58_038.png)
+
 
 
 ---
@@ -1838,6 +1990,10 @@ der Anwendung etwas mit. Demgegenüber ist UI zuständig für die
 Kommunikation mit dem Benutzer über Standard-Input/-Output.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p61_039](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p61_039.png)
+
+
+
 ---
 
 
@@ -1907,6 +2063,10 @@ könnte ich nachträglich und unmittelbar bedarfsgetrieben und ohne gro-
 ßen Aufwand ein Interface IUI einführen. Die IODA Architektur erlaubt
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p63_040](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p63_040.png)
+
+
+
 ---
 
 
@@ -1928,6 +2088,10 @@ der Spitze in Run() kulminiert.
 Abbildung37:DieLeistungdesControllersbestehtvoralleminderIntegration
 Wie gesagt, wäre das Problem umfänglicher, hätte ich diese Menge an
 IntegrationineineeigeneKlasseausgelagert;dochfürdiesesBeispielfinde
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p64_041](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p64_041.png)
+
 
 
 ---
@@ -1999,6 +2163,10 @@ Code Development Trainings vermittelt habe.
 ²⁸https://ccd-school.de/2017/02/kontrollstrukturen-in-der-integration/
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p66_042](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p66_042.png)
+
+
+
 ---
 
 
@@ -2046,6 +2214,10 @@ der Verantwortlichkeit Integration, mehrere mit der Verantwortlichkeit
 Operation und auch eine Datenklasse.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p68_043](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p68_043.png)
+
+
+
 ---
 
 
@@ -2062,6 +2234,10 @@ words() ist eine Integration (vgl. Abbildung 28). Wie kann das sein?
 Das IODA Architekturmodell ist fraktal.
 Es kann eine IODA-Hierarchie innerhalb einer IODA-Hierarchie existie-
 ren (Abbildung 41).
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p69_044](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p69_044.png)
+
 
 
 ---
@@ -2093,6 +2269,10 @@ eine Integration sein, auch wenn es darin Operationen gibt? Wenn Sie
 wollen, können Sie solche Module in einer Hierarchie kennzeichnen. Ich
 tue das allerdings nicht. Wichtiger scheint mir, Augenmaß zu bewahren
 und zu schauen, wie der Anteil von Integration zu Operation in solch ei-
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p70_045](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p70_045.png)
+
 
 
 ---
@@ -2255,6 +2435,10 @@ trollstrukturen und API-Calls vorhanden ist. Nur 3rd Party Code kann als
 Logik gewertet werden.
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p75_046](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p75_046.png)
+
+
+
 ---
 
 
@@ -2274,6 +2458,10 @@ sein. Das Rote ist insofern gar nicht rot, sondern grün. So war Abbildung
 41 ursprünglich gemeint.
 Aber warum nicht auch die rote Operation eine Operation sein lassen und
 die grüne Integration darin als Logik nutzen?
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p76_047](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p76_047.png)
+
 
 
 ---
@@ -2297,6 +2485,10 @@ Funktionenangesehenwerden.3rdPartyAPI-Funktionenliegenebenfalls
 binär vor. Die bisherige Definition wird von der neuen also umschlossen.
 Neu hinzu kommen nun jedoch auch alle anderen Funktionen, die ledig-
 lich binär vorliegen. Dazu zähle ich ebenfalls Funktionen, die in einem
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p77_048](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p77_048.png)
+
 
 
 ---
@@ -2369,6 +2561,14 @@ Diese Integration nenne ich nun ganz konkret Interactor. Der Interactor
 sorgt für die Funktion von Software im Rahmen einer Interaktion. Er
 
 
+![ioda-architektur-im-vergleich-dnp.Update2020_p79_049](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p79_049.png)
+
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p79_050](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p79_050.png)
+
+
+
 ---
 
 
@@ -2396,6 +2596,10 @@ Provider. Er grenzt das Visuelle, die konkrete Interaktion mit der Umwelt
 aus. Das, was übrig bleibt, ist dann prinzipiell viel leichter automatisiert
 testbar.
 Am Processor setzen aus meiner Sicht Akzeptanztests an. Die Funktionen
+
+
+![ioda-architektur-im-vergleich-dnp.Update2020_p80_051](ioda-architektur-im-vergleich-dnp.Update2020_images/ioda-architektur-im-vergleich-dnp.Update2020_p80_051.png)
+
 
 
 ---

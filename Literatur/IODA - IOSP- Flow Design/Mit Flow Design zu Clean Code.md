@@ -5655,6 +5655,10 @@ eine bessere Struktur.
 
 
 
+![Mit_Flow_Design_zu_Clean_Code_p177_003](Mit_Flow_Design_zu_Clean_Code_images/Mit_Flow_Design_zu_Clean_Code_p177_003.png)
+
+
+
 ---
 
 

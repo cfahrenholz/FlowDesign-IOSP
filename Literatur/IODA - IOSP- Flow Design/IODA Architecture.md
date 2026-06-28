@@ -8,6 +8,10 @@ DECOUPLING CONCERNS EVEN MORE BY GET TING RID OF
 F UNCTIONAL DEPENDENCIES
 
 
+![IODA_Architecture_p1_001](IODA_Architecture_images/IODA_Architecture_p1_001.png)
+
+
+
 ---
 
 
@@ -23,6 +27,10 @@ Agenda
 • IODA Architecture Model
 13/11/2023
 2
+
+
+![IODA_Architecture_p2_002](IODA_Architecture_images/IODA_Architecture_p2_002.png)
+
 
 
 ---
@@ -43,6 +51,10 @@ Do you already have a basic code, architecture, or system design in mind?
 13/11/2023 3
 
 
+![IODA_Architecture_p3_003](IODA_Architecture_images/IODA_Architecture_p3_003.png)
+
+
+
 ---
 
 
@@ -59,6 +71,14 @@ Note: Regex checks if it is an alphanumeric word including dash.
 13/11/2023 4
 
 
+![IODA_Architecture_p4_004](IODA_Architecture_images/IODA_Architecture_p4_004.png)
+
+
+
+![IODA_Architecture_p4_005](IODA_Architecture_images/IODA_Architecture_p4_005.png)
+
+
+
 ---
 
 
@@ -67,6 +87,14 @@ Note: Regex checks if it is an alphanumeric word including dash.
 
 Mixed / Confused Responsibilities
 13/11/2023 5
+
+
+![IODA_Architecture_p5_006](IODA_Architecture_images/IODA_Architecture_p5_006.png)
+
+
+
+![IODA_Architecture_p5_007](IODA_Architecture_images/IODA_Architecture_p5_007.png)
+
 
 
 ---
@@ -80,6 +108,22 @@ Improved:
 • Understandability
 • Clarity of responsibilities and relations
 13/11/2023 6
+
+
+![IODA_Architecture_p6_008](IODA_Architecture_images/IODA_Architecture_p6_008.png)
+
+
+
+![IODA_Architecture_p6_009](IODA_Architecture_images/IODA_Architecture_p6_009.png)
+
+
+
+![IODA_Architecture_p6_010](IODA_Architecture_images/IODA_Architecture_p6_010.png)
+
+
+
+![IODA_Architecture_p6_011](IODA_Architecture_images/IODA_Architecture_p6_011.png)
+
 
 
 ---
@@ -97,6 +141,14 @@ not easy to test
 Functional Dependency exists:
 BL calls other logic from DAL
 13/11/2023 7
+
+
+![IODA_Architecture_p7_012](IODA_Architecture_images/IODA_Architecture_p7_012.png)
+
+
+
+![IODA_Architecture_p7_013](IODA_Architecture_images/IODA_Architecture_p7_013.png)
+
 
 
 ---
@@ -118,6 +170,18 @@ without DIP with DIP
 13/11/2023 8
 
 
+![IODA_Architecture_p8_014](IODA_Architecture_images/IODA_Architecture_p8_014.png)
+
+
+
+![IODA_Architecture_p8_015](IODA_Architecture_images/IODA_Architecture_p8_015.png)
+
+
+
+![IODA_Architecture_p8_016](IODA_Architecture_images/IODA_Architecture_p8_016.png)
+
+
+
 ---
 
 
@@ -127,6 +191,18 @@ without DIP with DIP
 Decoupling of Layers
 Layered Architecture with DIP Interfaces are decoupling layers
 13/11/2023 9
+
+
+![IODA_Architecture_p9_017](IODA_Architecture_images/IODA_Architecture_p9_017.png)
+
+
+
+![IODA_Architecture_p9_018](IODA_Architecture_images/IODA_Architecture_p9_018.png)
+
+
+
+![IODA_Architecture_p9_019](IODA_Architecture_images/IODA_Architecture_p9_019.png)
+
 
 
 ---
@@ -147,6 +223,18 @@ during compile time and runtime
 13/11/2023 10
 
 
+![IODA_Architecture_p10_020](IODA_Architecture_images/IODA_Architecture_p10_020.png)
+
+
+
+![IODA_Architecture_p10_021](IODA_Architecture_images/IODA_Architecture_p10_021.png)
+
+
+
+![IODA_Architecture_p10_022](IODA_Architecture_images/IODA_Architecture_p10_022.png)
+
+
+
 ---
 
 
@@ -159,6 +247,10 @@ Why…?
 • … should the BL be responsible to control the data access?
 => There seems to be some confusion of responsibilities!?
 13/11/2023 11
+
+
+![IODA_Architecture_p11_023](IODA_Architecture_images/IODA_Architecture_p11_023.png)
+
 
 
 ---
@@ -185,6 +277,18 @@ Architecture
 13/11/2023 12
 
 
+![IODA_Architecture_p12_024](IODA_Architecture_images/IODA_Architecture_p12_024.png)
+
+
+
+![IODA_Architecture_p12_025](IODA_Architecture_images/IODA_Architecture_p12_025.png)
+
+
+
+![IODA_Architecture_p12_026](IODA_Architecture_images/IODA_Architecture_p12_026.png)
+
+
+
 ---
 
 
@@ -206,6 +310,14 @@ outside -> inside
 • increases the abstraction
 -> good idea?
 13/11/2023 13
+
+
+![IODA_Architecture_p13_027](IODA_Architecture_images/IODA_Architecture_p13_027.png)
+
+
+
+![IODA_Architecture_p13_028](IODA_Architecture_images/IODA_Architecture_p13_028.png)
+
 
 
 ---
@@ -233,6 +345,14 @@ and UI (IPresenter)
 13/11/2023 14
 
 
+![IODA_Architecture_p14_029](IODA_Architecture_images/IODA_Architecture_p14_029.png)
+
+
+
+![IODA_Architecture_p14_030](IODA_Architecture_images/IODA_Architecture_p14_030.png)
+
+
+
 ---
 
 
@@ -248,6 +368,18 @@ dependencies point from outside to inside!
 (see later)
 • Maybe Complex?
 13/11/2023 15
+
+
+![IODA_Architecture_p15_031](IODA_Architecture_images/IODA_Architecture_p15_031.png)
+
+
+
+![IODA_Architecture_p15_032](IODA_Architecture_images/IODA_Architecture_p15_032.png)
+
+
+
+![IODA_Architecture_p15_033](IODA_Architecture_images/IODA_Architecture_p15_033.png)
+
 
 
 ---
@@ -278,6 +410,26 @@ Dependencies clean and decoupled with DIP
 13/11/2023 16
 
 
+![IODA_Architecture_p16_034](IODA_Architecture_images/IODA_Architecture_p16_034.png)
+
+
+
+![IODA_Architecture_p16_035](IODA_Architecture_images/IODA_Architecture_p16_035.png)
+
+
+
+![IODA_Architecture_p16_036](IODA_Architecture_images/IODA_Architecture_p16_036.png)
+
+
+
+![IODA_Architecture_p16_037](IODA_Architecture_images/IODA_Architecture_p16_037.png)
+
+
+
+![IODA_Architecture_p16_038](IODA_Architecture_images/IODA_Architecture_p16_038.png)
+
+
+
 ---
 
 
@@ -303,6 +455,18 @@ Bad:
 13/11/2023 17
 
 
+![IODA_Architecture_p17_039](IODA_Architecture_images/IODA_Architecture_p17_039.png)
+
+
+
+![IODA_Architecture_p17_040](IODA_Architecture_images/IODA_Architecture_p17_040.png)
+
+
+
+![IODA_Architecture_p17_041](IODA_Architecture_images/IODA_Architecture_p17_041.png)
+
+
+
 ---
 
 
@@ -311,6 +475,10 @@ Bad:
 
 The IODA Architecture Model
 13/11/2023 18
+
+
+![IODA_Architecture_p18_042](IODA_Architecture_images/IODA_Architecture_p18_042.png)
+
 
 
 ---
@@ -328,6 +496,10 @@ Goals for an improved Architecture Pattern
 • Avoid functional dependencies that are hard to test
 • Avoid additional complexity because of decoupling efforts
 13/11/2023 19
+
+
+![IODA_Architecture_p19_043](IODA_Architecture_images/IODA_Architecture_p19_043.png)
+
 
 
 ---
@@ -360,6 +532,14 @@ build, changes much less, is more stable and versioned)
 13/11/2023 20
 
 
+![IODA_Architecture_p20_044](IODA_Architecture_images/IODA_Architecture_p20_044.png)
+
+
+
+![IODA_Architecture_p20_045](IODA_Architecture_images/IODA_Architecture_p20_045.png)
+
+
+
 ---
 
 
@@ -388,6 +568,18 @@ than function calls
 13/11/2023 21
 
 
+![IODA_Architecture_p21_046](IODA_Architecture_images/IODA_Architecture_p21_046.png)
+
+
+
+![IODA_Architecture_p21_047](IODA_Architecture_images/IODA_Architecture_p21_047.png)
+
+
+
+![IODA_Architecture_p21_048](IODA_Architecture_images/IODA_Architecture_p21_048.png)
+
+
+
 ---
 
 
@@ -414,6 +606,14 @@ Functional Dependencies – Formal Responsibilities / Testability
 13/11/2023 22
 
 
+![IODA_Architecture_p22_049](IODA_Architecture_images/IODA_Architecture_p22_049.png)
+
+
+
+![IODA_Architecture_p22_050](IODA_Architecture_images/IODA_Architecture_p22_050.png)
+
+
+
 ---
 
 
@@ -428,6 +628,14 @@ Functional Dependencies
 (logic) and integration), only a few operations at bottom
 • Always hard to test. DIP/IoC do not help.
 13/11/2023 23
+
+
+![IODA_Architecture_p23_051](IODA_Architecture_images/IODA_Architecture_p23_051.png)
+
+
+
+![IODA_Architecture_p23_052](IODA_Architecture_images/IODA_Architecture_p23_052.png)
+
 
 
 ---
@@ -463,6 +671,14 @@ Principle
 13/11/2023 24
 
 
+![IODA_Architecture_p24_053](IODA_Architecture_images/IODA_Architecture_p24_053.png)
+
+
+
+![IODA_Architecture_p24_054](IODA_Architecture_images/IODA_Architecture_p24_054.png)
+
+
+
 ---
 
 
@@ -485,6 +701,14 @@ New Architecture Pattern – Connect Operations
 • E. g. Stack, Queue, see also IODA sample (slide 33)
 • This is not a problematic FD when accessed by Operations
 13/11/2023 25
+
+
+![IODA_Architecture_p25_055](IODA_Architecture_images/IODA_Architecture_p25_055.png)
+
+
+
+![IODA_Architecture_p25_056](IODA_Architecture_images/IODA_Architecture_p25_056.png)
+
 
 
 ---
@@ -514,6 +738,14 @@ Operations
 13/11/2023 26
 
 
+![IODA_Architecture_p26_057](IODA_Architecture_images/IODA_Architecture_p26_057.png)
+
+
+
+![IODA_Architecture_p26_058](IODA_Architecture_images/IODA_Architecture_p26_058.png)
+
+
+
 ---
 
 
@@ -532,6 +764,14 @@ data
 • Improves Understandability (Integration code easier to read)
 • Improves Testability (Operations have less dependencies)
 13/11/2023 27
+
+
+![IODA_Architecture_p27_059](IODA_Architecture_images/IODA_Architecture_p27_059.png)
+
+
+
+![IODA_Architecture_p27_060](IODA_Architecture_images/IODA_Architecture_p27_060.png)
+
 
 
 ---
@@ -563,6 +803,18 @@ on the environment
 13/11/2023 28
 
 
+![IODA_Architecture_p28_061](IODA_Architecture_images/IODA_Architecture_p28_061.png)
+
+
+
+![IODA_Architecture_p28_062](IODA_Architecture_images/IODA_Architecture_p28_062.png)
+
+
+
+![IODA_Architecture_p28_063](IODA_Architecture_images/IODA_Architecture_p28_063.png)
+
+
+
 ---
 
 
@@ -583,6 +835,14 @@ IODA – 2-Dimensional Architecture
 • Distinction between formal- and content-related
 responsibilities
 13/11/2023 29
+
+
+![IODA_Architecture_p29_064](IODA_Architecture_images/IODA_Architecture_p29_064.png)
+
+
+
+![IODA_Architecture_p29_065](IODA_Architecture_images/IODA_Architecture_p29_065.png)
+
 
 
 ---
@@ -612,6 +872,14 @@ IODA - Sample
 13/11/2023 30
 
 
+![IODA_Architecture_p30_066](IODA_Architecture_images/IODA_Architecture_p30_066.png)
+
+
+
+![IODA_Architecture_p30_067](IODA_Architecture_images/IODA_Architecture_p30_067.png)
+
+
+
 ---
 
 
@@ -634,6 +902,14 @@ needed with IoC-Container
 DIP as CA is doing it upfront. Grows with
 requirements
 13/11/2023 31
+
+
+![IODA_Architecture_p31_068](IODA_Architecture_images/IODA_Architecture_p31_068.png)
+
+
+
+![IODA_Architecture_p31_069](IODA_Architecture_images/IODA_Architecture_p31_069.png)
+
 
 
 ---
@@ -660,6 +936,18 @@ to other classes
 • Continuations / Delegates (see yellow parts)
 • Logic in Operations easier testable (no FDs)
 13/11/2023 32
+
+
+![IODA_Architecture_p32_070](IODA_Architecture_images/IODA_Architecture_p32_070.png)
+
+
+
+![IODA_Architecture_p32_071](IODA_Architecture_images/IODA_Architecture_p32_071.png)
+
+
+
+![IODA_Architecture_p32_072](IODA_Architecture_images/IODA_Architecture_p32_072.png)
+
 
 
 ---
@@ -701,6 +989,18 @@ shared state)
 13/11/2023 33
 
 
+![IODA_Architecture_p33_073](IODA_Architecture_images/IODA_Architecture_p33_073.png)
+
+
+
+![IODA_Architecture_p33_074](IODA_Architecture_images/IODA_Architecture_p33_074.png)
+
+
+
+![IODA_Architecture_p33_075](IODA_Architecture_images/IODA_Architecture_p33_075.png)
+
+
+
 ---
 
 
@@ -728,6 +1028,14 @@ original Operation becomes an Integration ->
 13/11/2023 34
 
 
+![IODA_Architecture_p34_076](IODA_Architecture_images/IODA_Architecture_p34_076.png)
+
+
+
+![IODA_Architecture_p34_077](IODA_Architecture_images/IODA_Architecture_p34_077.png)
+
+
+
 ---
 
 
@@ -751,6 +1059,18 @@ format (package reference see slide FD)
 • Or Integration calls other Integration which integrates
 Operations
 13/11/2023 35
+
+
+![IODA_Architecture_p35_078](IODA_Architecture_images/IODA_Architecture_p35_078.png)
+
+
+
+![IODA_Architecture_p35_079](IODA_Architecture_images/IODA_Architecture_p35_079.png)
+
+
+
+![IODA_Architecture_p35_080](IODA_Architecture_images/IODA_Architecture_p35_080.png)
+
 
 
 ---
@@ -791,6 +1111,22 @@ Can be reused in any other application
 13/11/2023 36
 
 
+![IODA_Architecture_p36_081](IODA_Architecture_images/IODA_Architecture_p36_081.png)
+
+
+
+![IODA_Architecture_p36_082](IODA_Architecture_images/IODA_Architecture_p36_082.png)
+
+
+
+![IODA_Architecture_p36_083](IODA_Architecture_images/IODA_Architecture_p36_083.png)
+
+
+
+![IODA_Architecture_p36_084](IODA_Architecture_images/IODA_Architecture_p36_084.png)
+
+
+
 ---
 
 
@@ -809,6 +1145,14 @@ Head and Body can be hosted in different
 •
 threads, processes
 13/11/2023 37
+
+
+![IODA_Architecture_p37_085](IODA_Architecture_images/IODA_Architecture_p37_085.png)
+
+
+
+![IODA_Architecture_p37_086](IODA_Architecture_images/IODA_Architecture_p37_086.png)
+
 
 
 ---
@@ -836,6 +1180,10 @@ access,…)
 • Even in brown field it can help
 • Use IODA structure as a target or NorthStar for refactoring and new features
 13/11/2023 38
+
+
+![IODA_Architecture_p38_087](IODA_Architecture_images/IODA_Architecture_p38_087.png)
+
 
 
 ---
@@ -874,3 +1222,6 @@ Other resources with similar approach
 •
 • A-Frame Architecture
 13/11/2023 39
+
+
+![IODA_Architecture_p39_088](IODA_Architecture_images/IODA_Architecture_p39_088.png)
